@@ -1,0 +1,149 @@
+$font-stack: "Josefin Sans", sans-serif;
+$gold: darken(#dbd39e, 30%);
+$input-height: 3rem;
+$input-border: 1px solid $gold;
+$media-margin: 1rem 0 1rem 9rem !important;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  margin: 2.5rem 2rem;
+  width: 145px;
+}
+.img-container {
+  height: 500px;
+  width: 100vw;
+  margin: 0 auto;
+}
+.text {
+  margin: 3rem 0 0 0;
+  text-align: center;
+  h1 {
+    font-family: $font-stack;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.6rem;
+    opacity: 0.75;
+
+    span {
+      color: $gold;
+      font-weight: 300;
+    }
+  }
+  p {
+    color: darken($gold, 10%);
+    width: 315px;
+    margin: 1.5rem auto;
+    font-family: $font-stack;
+    font-size: 19px;
+    opacity: 0.6;
+  }
+  .inputs {
+    margin: 3rem auto 5rem auto;
+
+    .email {
+      height: $input-height;
+      width: 250px;
+      border-radius: 30px;
+      color: $gold;
+      font-weight: 500;
+      border: $input-border;
+      font-size: 1rem;
+      padding: 1.4rem;
+
+      &::placeholder {
+        // padding-left: 0.5rem;
+        text-transform: capitalize;
+      }
+
+      &[type="text"] {
+        padding-left: 3rem;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+    .button {
+      height: $input-height;
+      border-radius: 30px;
+      border: $input-border;
+      width: 90px;
+      position: absolute;
+      right: 20%;
+      cursor: pointer;
+      background-color: $gold;
+      transition: 0.75s;
+      color: #fff;
+      font-family: $font-stack;
+      font-size: 1.5rem;
+
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        background-color: lighten($gold, 40%);
+        color: darken($gold, 10%);
+      }
+    }
+  }
+}
+footer {
+  text-align: center;
+  font-family: $font-stack;
+}
+
+@media (min-width: 1150px) {
+  .container,
+  footer {
+    width: 60vw;
+  }
+  header {
+    margin-left: 9rem;
+    width: 160px !important;
+  }
+  .img-container {
+    position: fixed;
+    width: 40vw;
+    height: 100vh;
+    margin: 0 0 0 60vw;
+    transform: translateY(-118px);
+  }
+  h1 {
+    width: 400px;
+    margin: 8rem 0 3rem 9rem;
+    text-align: left;
+    font-size: 5.1rem !important;
+    font-weight: 600 !important;
+  }
+  p {
+    width: 40vw !important;
+    letter-spacing: 2px;
+    margin: $media-margin;
+    text-align: left;
+    line-height: 1.5rem;
+  }
+  .inputs {
+    margin: 3rem 0 5rem 9rem !important;
+    .email {
+      width: 25vw !important;
+      float: left;
+    }
+    #button {
+      left: 30vw;
+    }
+  }
+  footer {
+    margin-top: 9rem !important;
+  }
+}
